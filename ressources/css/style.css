@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto+Slab:700');
+
+/* BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #fff;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    background: url('../images/daniel-leone-g30P1zcOzXo-unsplash.jpg') center 60% / cover no-repeat;
+    color: #e6eef7;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: left;
+    padding: 6rem 1rem;
+}
+
+/* NAVIGATION */
+nav {
+    background: #e2e2e2;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+ul {
+    list-style: none;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s ease;
+}
+
+nav .hamburger {
+    display: none;
+}
+
+nav li.active a,
+nav li a:hover {
+    color: #06a4ea;
+    background: #fff;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: none;
+    margin: 0;
+    padding: 0 1rem 2rem;
+}
+
+
+/* ARTICLE / LOGBOOK */
+#articles {
+    flex: 2 1 600px;
+    background: #fff;
+    border-radius: 8px;
+    padding-left: 0;
+}
+
+#articles h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-bottom: 1px #eee solid
+}
+
+#articles header p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #999;
+    padding-bottom: 0.5rem;
+    text-align: right;
+}
+
+
+#articles a {
+    color: #1e93d9;
+    text-decoration: underline;
+}
+
+article p {
+    text-align: justify;
+}
+
+
+/* SIDEBAR / SUMMARY */
+.summary,
+aside {
+    flex: 1 1 70px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(90, 130, 220, 0.5);
+    height: fit-content;
+    margin-left: 3rem;
+}
+
+.summary h3,
+aside h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    background: #06a4ea;
+    padding: 0.9rem 1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.summary p,
+aside p,
+.summary li,
+aside li {
+    margin: 0.7em 0;
+    font-size: 1rem;
+}
+
+.summary ul,
+aside ul {
+    padding-left: 1.1em;
+    list-style-type: none;
+}
+
+/* FOOTER */
+footer {
+    background: #eee;
+    text-align: right;
+    padding: 1rem 2rem;
+    color: #555;
+}
+
+footer #logo {
+    height: 80px;
+}
+
+.mockup-images {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mockup-images img {
+    width: 48%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Tableau de bord */
+#articles table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+#articles table th,
+#articles table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+#articles table th {
+    background-color: #06a4ea;
+    color: #fff;
+    font-weight: 700;
+}
+
+#articles table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#articles table tbody tr:hover {
+    background-color: #e6f2fb;
+}
+
+#articles table td {
+    color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #articles,
+    .summary,
+    aside {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        padding: 2rem 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li a {
+        padding: 0.75rem 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    #articles {
+        font-size: 0.95rem;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+}
